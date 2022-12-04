@@ -1,0 +1,38 @@
+{
+"cat" : [
+    {
+
+        "id": 1,
+        "name": "Phylise", 
+        "image": "img1-jpg",
+        "votes": 10
+
+    
+    },
+
+
+{
+    "id": 2,
+    "name": "jojo", 
+    "image": "img2-jpg",
+    "votes": 5
+
+
+
+},
+
+
+{
+     "id": 2,
+    "name": "Kate", 
+    "image": "img3-jpg",
+    "votes": 3
+
+
+}
+
+
+
+
+]
+}
