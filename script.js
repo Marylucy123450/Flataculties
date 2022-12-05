@@ -1,57 +1,46 @@
+// 
 document.addEventListener("DOMContentLoaded", () => {
-    getCats(cats)
-    })
-
-    const url = "http://localhost:3000/characters"
-
-    function getCats(){
-        
-        fetch(url)
-        .then(res => res.json())
-        .then(data => {
-         console.log(data)
-        data.forEach(element => {
-            displayCatsName(cat)
+    getCats()
+    }) 
+              
+    // The endpoint to fetch data
+    const url= "http://localhost:3000/characters"
+    // 
+                function getCats(){
+    
+                    fetch(url) 
+                    .then(res => res.json()) 
+                    .then(cats => {
+                       
+                        cats.forEach(cat => {
+                            displayCats(cat)
+                        });
+                    })
+                }
+    
+    //
+                function displayCats(cat){
+                    const name= document.createElement('p')
+                    name.innerHTML=cat.name
+                    const main= document.getElementById("main")
+                    main.append(name)
+                    //Event listener listens for a click, it the calls SingleCat function
+                    name.addEventListener("click", () => {
+                        singleCat(cat) 
+                        
+                    })
+                }
+            // 
+    function singleCat(cat){
+        document.getElementById("catName").innerHTML=cat.name
+        document.getElementById("catImg").src = cat.image
+        const btn = document.getElementById("catLikes")
+            btn.textContent= `Likes ${cat.votes}`
+            // 
+        btn.addEventListener("click", ()=> { 
+           cat.votes++
+           btn.textContent= `Likes ${cat.votes}`
             
-        });
         })
-    }
-
-    
-    
-    {
-        function displayCatsName(cat) {
-            console.log(cat);
-            const name= document.createElement('p');
-            name.innerHTML= cat.name
-            const main= document.getElementById("main")
-            main.append(name)
-    
-            name.addEventListener("click", () => {
-                getSingleCat(cat)
-            })
-        }
-    }
-    
-    function getSingleCat(cat){
-        document.getElementById("catname").innerHTML = cat.name
-        document.getElementById("catimage").src = cat.image
-        const btn =document.getElementById("catlikes")
-        btn.addEventListener("click", () => {
-            cat.votes++
-            btn .textContent =`likes ${cat.votes}`
-        })
-
-        
-
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-
-
+    } 
+    btn.innerHTML=`Likes: ${Likes}`
