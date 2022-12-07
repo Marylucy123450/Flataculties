@@ -1,8 +1,4 @@
 # Flatacuties App.
-
-#####Author: <b>Marylucy Omenda.</b>
-
-
 # Project Description
 This project fetched data from a local DPL.
 
@@ -23,7 +19,18 @@ This project fetched data from a local DPL.
 .Run this command
 `json server  --watch db.json`
 
+.Open your browser using live sever extension
+
+ # Help
+ command to run if program contains helper info
+
+ #Authors
+ Marylucy Atieno.
+ Email marylucy.atieno@student.com
 
 # License.
 
 Copyright (c) Marylucy.
+
+#Acknowledgments.
+Bootstrap (https://getbootstrap.com/docs/5.2/getting-started/introduction/)
